@@ -3,197 +3,341 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Mahasiswa UBSI Ciledug Gelar Sosialisasi Anti Bullying</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
-    body{
+
+    *{
       margin:0;
-      font-family: Arial, Helvetica, sans-serif;
-      background:#f4f4f4;
-      color:#333;
+      padding:0;
+      box-sizing:border-box;
     }
+
+    body{
+      font-family:'Poppins',sans-serif;
+      background:#f5f7fb;
+      color:#333;
+      line-height:1.8;
+    }
+
+    /* NAVBAR */
+
+    .navbar{
+      width:100%;
+      background:#0d47a1;
+      padding:15px 8%;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .navbar h1{
+      color:white;
+      font-size:20px;
+      font-weight:600;
+    }
+
+    /* CONTAINER */
 
     .container{
       width:90%;
-      max-width:900px;
-      margin:30px auto;
-      background:#fff;
-      padding:30px;
-      border-radius:10px;
-      box-shadow:0 0 10px rgba(0,0,0,0.1);
+      max-width:1000px;
+      margin:40px auto;
+      background:white;
+      border-radius:18px;
+      overflow:hidden;
+      box-shadow:0 8px 30px rgba(0,0,0,0.08);
     }
 
-    .title{
-      font-size:32px;
-      font-weight:bold;
-      margin-bottom:10px;
-      color:#0d47a1;
-    }
-
-    .meta{
-      color:gray;
-      margin-bottom:20px;
-    }
+    /* HERO IMAGE */
 
     .hero{
       width:100%;
-      border-radius:10px;
-      margin-bottom:25px;
-    }
-
-    p{
-      line-height:1.8;
-      text-align:justify;
-      margin-bottom:20px;
-    }
-
-    h2{
-      color:#1565c0;
-      margin-top:40px;
-    }
-
-    .gallery{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:15px;
-      margin-top:20px;
-    }
-
-    .gallery img{
-      width:100%;
-      border-radius:10px;
+      height:450px;
       object-fit:cover;
     }
 
-    .caption{
-      font-size:14px;
-      color:#666;
-      text-align:center;
-      margin-top:5px;
+    /* CONTENT */
+
+    .content{
+      padding:40px;
     }
 
-    footer{
-      margin-top:40px;
-      padding-top:20px;
-      border-top:1px solid #ddd;
-      color:#777;
-      text-align:center;
+    .title{
+      font-size:40px;
+      font-weight:700;
+      color:#0d47a1;
+      line-height:1.3;
+      margin-bottom:20px;
+    }
+
+    .meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:15px;
       font-size:14px;
+      color:#777;
+      margin-bottom:30px;
+    }
+
+    .meta span{
+      background:#eef3ff;
+      padding:8px 14px;
+      border-radius:30px;
+    }
+
+    p{
+      margin-bottom:22px;
+      text-align:justify;
+      font-size:16px;
+      color:#444;
+    }
+
+    h2{
+      margin-top:50px;
+      margin-bottom:20px;
+      color:#1565c0;
+      font-size:28px;
+      position:relative;
+      padding-left:15px;
+    }
+
+    h2::before{
+      content:'';
+      position:absolute;
+      left:0;
+      top:0;
+      width:5px;
+      height:100%;
+      background:#1565c0;
+      border-radius:10px;
+    }
+
+    /* GALLERY */
+
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:20px;
+      margin-top:25px;
+      margin-bottom:30px;
+    }
+
+    .card{
+      background:#fff;
+      border-radius:16px;
+      overflow:hidden;
+      box-shadow:0 5px 15px rgba(0,0,0,0.08);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+    }
+
+    .card img{
+      width:100%;
+      height:250px;
+      object-fit:cover;
+      display:block;
+    }
+
+    .caption{
+      padding:15px;
+      font-size:14px;
+      color:#555;
+      text-align:center;
+      font-weight:500;
+    }
+
+    /* QUOTE */
+
+    .quote{
+      background:#eef4ff;
+      border-left:5px solid #1565c0;
+      padding:20px;
+      border-radius:10px;
+      margin:30px 0;
+      font-style:italic;
+      color:#333;
+    }
+
+    /* FOOTER */
+
+    footer{
+      background:#0d47a1;
+      color:white;
+      text-align:center;
+      padding:25px;
+      margin-top:40px;
+      font-size:14px;
+    }
+
+    footer p{
+      color:white;
+      margin:5px 0;
+      text-align:center;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:768px){
+
+      .hero{
+        height:250px;
+      }
+
+      .content{
+        padding:25px;
+      }
+
+      .title{
+        font-size:28px;
+      }
+
+      h2{
+        font-size:22px;
+      }
+
+      p{
+        font-size:15px;
+      }
+
+      .navbar h1{
+        font-size:16px;
+      }
+
     }
 
   </style>
 </head>
+
 <body>
+
+  <!-- NAVBAR -->
+
+  <div class="navbar">
+    <h1>Pengabdian Masyarakat UBSI Ciledug</h1>
+  </div>
+
+  <!-- CONTAINER -->
 
   <div class="container">
 
-    <div class="title">
-      Mahasiswa UBSI Ciledug Gelar Sosialisasi Anti Bullying di SDN Pondok Kacang Timur 02
-    </div>
+    <!-- HERO -->
 
     <img src="images/foto1.jpg" class="hero">
 
-    <p>
-      Mahasiswa Program Studi Sistem Informasi 
-      Universitas Bina Sarana Informatika (UBSI) Kampus Ciledug 
-      melaksanakan kegiatan Pengabdian Kepada Masyarakat (PKM) 
-      berupa sosialisasi anti bullying di SDN Pondok Kacang Timur 02, 
-      Tangerang Selatan, pada Kamis (30/04/2026).
-    </p>
+    <!-- CONTENT -->
 
-    <p>
-      Kegiatan ini bertujuan untuk meningkatkan pemahaman siswa mengenai 
-      pentingnya menciptakan lingkungan sekolah yang aman, nyaman, 
-      dan bebas dari tindakan bullying. Sosialisasi dilaksanakan secara 
-      tatap muka di kelas 5A dan diikuti oleh 53 siswa dan siswi.
-    </p>
+    <div class="content">
 
-    <h2>Sesi Penyampaian Materi Anti Bullying</h2>
-
-    <p>
-      Tim pelaksana kegiatan terdiri dari 
-      M. Andika Farhansyah sebagai ketua pelaksana bersama 
-      Muhammad Hafizh Ramadhan, Wulan Sitompul, Julita Manalu, 
-      Sahira Nazara Putri Kayla, dan Rasyiid Nur Rizqi. 
-      Kegiatan ini merupakan bentuk implementasi Tri Dharma Perguruan Tinggi, 
-      khususnya dalam bidang pengabdian kepada masyarakat.
-    </p>
-
-    <p>
-      Dalam kegiatan tersebut, mahasiswa memberikan edukasi mengenai 
-      pengertian bullying, jenis-jenis bullying, dampak negatif bullying, 
-      serta cara mencegah dan mengatasi tindakan perundungan di lingkungan sekolah.
-      Materi disampaikan secara interaktif melalui presentasi, sesi tanya jawab, 
-      dan permainan edukatif agar siswa lebih mudah memahami materi yang diberikan.
-    </p>
-
-    <div class="gallery">
-      <div>
-        <img src="images/foto2.jpeg">
-        <div class="caption">Penyampaian materi anti bullying</div>
+      <div class="title">
+        Mahasiswa UBSI Ciledug Gelar Sosialisasi Anti Bullying di SDN Pondok Kacang Timur 02
       </div>
 
-      <div>
-        <img src="images/foto3.jpeg">
-        <div class="caption">Interaksi bersama siswa</div>
+      <div class="meta">
+        <span>📅 Dipublikasikan: 16 Mei 2026</span>
+        <span>🏫 UBSI Kampus Ciledug</span>
+        <span>📍 Tangerang Selatan</span>
+        <span>✍️ Penulis: M. Andika Farhansyah dan Tim PKM Sistem Informasi</span>
       </div>
+
+      <p>
+        Mahasiswa Program Studi Sistem Informasi Universitas Bina Sarana Informatika (UBSI) Kampus Ciledug melaksanakan kegiatan Pengabdian Kepada Masyarakat (PKM) berupa sosialisasi anti bullying di SDN Pondok Kacang Timur 02, Tangerang Selatan.
+      </p>
+
+      <p>
+        Kegiatan ini bertujuan untuk meningkatkan pemahaman siswa mengenai pentingnya menciptakan lingkungan sekolah yang aman, nyaman, dan bebas dari tindakan bullying. Sosialisasi dilaksanakan secara tatap muka di kelas 5A dan diikuti oleh 53 siswa dan siswi.
+      </p>
+
+      <h2>Sesi Penyampaian Materi</h2>
+
+      <p>
+        Tim pelaksana kegiatan terdiri dari M. Andika Farhansyah sebagai ketua pelaksana bersama Muhammad Hafizh Ramadhan, Wulan Sitompul, Julita Manalu, Sahira Nazara Putri Kayla, dan Rasyiid Nur Rizqi.
+      </p>
+
+      <p>
+        Dalam kegiatan tersebut, mahasiswa memberikan edukasi mengenai pengertian bullying, jenis-jenis bullying, dampak negatif bullying, serta cara mencegah dan mengatasi tindakan perundungan di lingkungan sekolah.
+      </p>
+
+      <div class="gallery">
+
+        <div class="card">
+          <img src="images/foto2.jpeg">
+          <div class="caption">
+            Mahasiswa UBSI Ciledug menyampaikan materi sosialisasi anti bullying kepada siswa SDN Pondok Kacang Timur 02.
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/foto3.jpeg">
+          <div class="caption">
+            Suasana sesi interaktif dan diskusi bersama siswa dalam kegiatan sosialisasi anti bullying.
+          </div>
+        </div>
+
+      </div>
+
+      <h2>Antusiasme Peserta</h2>
+
+      <p>
+        Para siswa terlihat antusias mengikuti kegiatan dari awal hingga akhir. Banyak peserta aktif bertanya dan berpartisipasi selama sesi berlangsung.
+      </p>
+
+      <div class="quote">
+        “Melalui kegiatan ini, kami berharap siswa dapat lebih memahami dampak bullying serta mampu menciptakan lingkungan sekolah yang aman, nyaman, dan saling menghargai.”
+      </div>
+
+      <div class="gallery">
+
+        <div class="card">
+          <img src="images/foto4.jpg">
+          <div class="caption">
+            Panitia memberikan hadiah kepada siswa yang aktif berpartisipasi selama kegiatan berlangsung.
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/foto5.jpg">
+          <div class="caption">
+            Foto bersama mahasiswa UBSI Ciledug dan siswa SDN Pondok Kacang Timur 02 setelah kegiatan selesai dilaksanakan.
+          </div>
+        </div>
+
+      </div>
+
+      <h2>Harapan Kegiatan</h2>
+
+      <p>
+        Pihak sekolah memberikan apresiasi atas pelaksanaan kegiatan Pengabdian Kepada Masyarakat yang dinilai mampu memberikan edukasi positif kepada siswa mengenai pentingnya budaya anti bullying di lingkungan sekolah.
+      </p>
+
+      <p>
+        Melalui kegiatan ini, mahasiswa Universitas Bina Sarana Informatika berharap dapat memberikan kontribusi positif kepada masyarakat sekaligus mengimplementasikan ilmu pengetahuan secara langsung di lingkungan pendidikan.
+      </p>
+
+      <p>
+        Kegiatan Pengabdian Kepada Masyarakat ini diharapkan dapat memberikan dampak positif dalam membentuk karakter siswa serta menciptakan lingkungan sekolah yang aman, nyaman, dan bebas dari tindakan bullying. Dengan adanya edukasi sejak dini, siswa diharapkan mampu menerapkan sikap saling menghargai, empati, dan toleransi dalam kehidupan sehari-hari.
+      </p>
+
     </div>
-
-    <h2>Sesi Tanya Jawab dan Interaksi Bersama Siswa</h2>
-
-    <p>
-      Antusiasme peserta terlihat selama kegiatan berlangsung. 
-      Para siswa aktif bertanya dan berpartisipasi dalam setiap sesi yang diberikan.
-      Untuk meningkatkan semangat peserta, panitia juga memberikan hadiah 
-      kepada siswa yang aktif selama kegiatan berlangsung.
-    </p>
-
-    <p>
-      Ketua pelaksana kegiatan, M. Andika Farhansyah, menyampaikan bahwa 
-      sosialisasi ini diharapkan dapat membantu siswa memahami pentingnya 
-      sikap saling menghargai, empati, dan toleransi terhadap sesama teman.
-    </p>
-
-    <p>
-      “Melalui kegiatan ini, kami berharap siswa dapat lebih memahami dampak bullying 
-      serta mampu menciptakan lingkungan sekolah yang aman, nyaman, 
-      dan saling menghargai,” ujarnya.
-    </p>
-
-    <div class="gallery">
-      <div>
-        <img src="images/foto4.jpg">
-        <div class="caption">Pembagian hadiah kepada peserta aktif</div>
-      </div>
-
-      <div>
-        <img src="images/foto5.jpg">
-        <div class="caption">Foto bersama mahasiswa dan siswa</div>
-      </div>
-    </div>
-
-    <h2>Apresiasi dari Pihak Sekolah</h2>
-
-    <p>
-      Pihak SDN Pondok Kacang Timur 02 turut memberikan apresiasi 
-      atas kegiatan Pengabdian Kepada Masyarakat yang dilaksanakan 
-      oleh mahasiswa UBSI Ciledug. Kegiatan ini dinilai memberikan 
-      manfaat positif dalam membangun karakter siswa dan meningkatkan 
-      kesadaran mengenai pentingnya budaya anti bullying di lingkungan sekolah.
-    </p>
-
-    <p>
-      Melalui kegiatan Pengabdian Kepada Masyarakat ini, mahasiswa 
-      Universitas Bina Sarana Informatika berharap dapat memberikan 
-      kontribusi positif kepada masyarakat sekaligus mengimplementasikan 
-      ilmu pengetahuan yang dimiliki secara langsung di lingkungan pendidikan.
-    </p>
-
-    <footer>
-      © 2026 Universitas Bina Sarana Informatika - Kampus Ciledug
-    </footer>
 
   </div>
+
+  <!-- FOOTER -->
+
+  <footer>
+    <p>© 2026 Universitas Bina Sarana Informatika - Kampus Ciledug</p>
+    <p>Pengabdian Kepada Masyarakat Program Studi Sistem Informasi</p>
+  </footer>
 
 </body>
 </html>
